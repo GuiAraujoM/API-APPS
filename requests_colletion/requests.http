@@ -1,0 +1,32 @@
+## Registro
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "gui",
+    "password": "123"
+}
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "gui",
+    "password": "123"
+}
+
+### Cadastra post
+POST http://localhost:3000/posts
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aSIsInBhc3N3b3JkIjoiMTIzIiwiaWF0IjoxNzAwOTQxMzI3LCJleHAiOjE3MDA5NDIyMjd9.9ktYaMD5cvV2kp4fyyMuBUe8SZB-RHNCa6av7TgHE_k
+
+{
+    "content": "Bla bla bla",
+    "image": "https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0-1.jpg",
+    "author":"gui"
+}
+
+### Lista posts
+GET http://localhost:3000/posts
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aSIsInBhc3N3b3JkIjoiMTIzIiwiaWF0IjoxNzAwOTQxMzI3LCJleHAiOjE3MDA5NDIyMjd9.9ktYaMD5cvV2kp4fyyMuBUe8SZB-RHNCa6av7TgHE_k
