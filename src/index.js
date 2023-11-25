@@ -26,6 +26,9 @@ app.use("/auth", authRoutes);
 const postRoutes = require("./routes/post-routes");
 app.use("/posts", postRoutes);
 
+const userRoutes = require("./routes/user-routes");
+app.use("/users", userRoutes);
+
 app.get(`/`, async (req, res) => {  
   res.send('Ok');
 });
