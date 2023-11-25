@@ -3,6 +3,9 @@ const syncDb = require("./models/sync");
 const express = require("express");
 const app = express();
 
+const cors = require("cors");
+app.use(cors());
+
 const session = require("express-session");
 
 app.use(
