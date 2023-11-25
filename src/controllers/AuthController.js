@@ -41,7 +41,7 @@ class AuthController {
       );
 
       console.log("Token gerado, logando como: " + email);
-      return res.status(200).json({success: true, token: token});
+      return res.status(200).json({success: true, token: token, user: {email: email, password: password}});
     }else{
       return res.status(403).json({success: false, message: 'Erro, e-mail ou senha incorretos.'});
     }
