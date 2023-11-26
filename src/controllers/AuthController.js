@@ -49,12 +49,12 @@ class AuthController {
 
   async register(req, res) {
     console.log("AuthController/register");
-    const { email, password } = req.body;
+    const { email, password, username, name, profileimage } = req.body;
 
-    if(!email || !password){
+    if (!email || !password || !username || !name || !profileimage) {
       return res
         .status(400)
-        .json({ created: false, message: "E-mail ou senha inválidos" });
+        .json({ created: false, message: "Dados inválidos" });
     }
 
     let user = await userController.getByEmail(email);

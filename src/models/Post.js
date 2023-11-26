@@ -18,7 +18,7 @@ const Post = sequelize.define(
       allowNull: true,
     },
     author: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     created_at: DataTypes.STRING,

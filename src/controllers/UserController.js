@@ -21,6 +21,9 @@ class UserController {
     const createdUser = await User.create({
       email: user.email,
       password: user.password,
+      username: user.username,
+      name: user.name,
+      profileImage: user.profileimage,
       updated_at: date_now,
       created_at: date_now,
     });

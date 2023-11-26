@@ -1,6 +1,7 @@
 const { Op, Sequelize } = require("sequelize");
 
 const { Post } = require("../models/Post");
+const { User } = require("../models/User");
 
 const UserController = require("../controllers/UserController");
 const userController = new UserController();
@@ -13,7 +14,14 @@ class PostController {
   async listAll(req, res) {
     console.log("PostController.listAll()");
 
-    const posts = await Post.findAll();   
+    const posts = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["name","username", "profileImage"], // Atributos do modelo User que você deseja incluir
+        },
+      ],
+    });   
 
     return res.status(200).json(posts);
   }
