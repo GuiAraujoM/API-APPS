@@ -51,6 +51,12 @@ class AuthController {
     console.log("AuthController/register");
     const { email, password } = req.body;
 
+    if(!email || !password){
+      return res
+        .status(400)
+        .json({ created: false, message: "E-mail ou senha inválidos" });
+    }
+
     let user = await userController.getByEmail(email);
     if(user){
       return res.status(400).json({created: false, message: 'E-mail já cadastrado'});
