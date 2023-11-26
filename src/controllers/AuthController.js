@@ -68,7 +68,19 @@ class AuthController {
     const created = await userController.create(user);
 
     if(created){
-      res.status(201).send({ created: true });
+      const token = jwt.sign(
+        {
+          email: email,
+          password: password
+        },
+        process.env.SECRET,
+        {
+          expiresIn: "900s",
+        }
+      );
+
+      console.log("Token gerado, logando como: " + email);
+      res.status(201).send({ created: true, user, token });
     }else{
       res.status(500).send({ created: false, message: 'Error' });
     }
