@@ -23,8 +23,8 @@ class UserController {
       password: user.password,
       username: user.username,
       profileimage: user.profileimage,
-      updated_at: date_now,
-      created_at: date_now,
+      updated_at: now,
+      created_at: now,
     });
 
     return createdUser;

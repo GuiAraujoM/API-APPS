@@ -42,8 +42,8 @@ class PostController {
       content: content,
       image: image || "",
       author: author,
-      updated_at: date_now,
-      created_at: date_now,
+      updated_at: now,
+      created_at: now,
     });
 
     if (createdPost) {
