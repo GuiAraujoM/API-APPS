@@ -32,7 +32,7 @@ class PostController {
 
     const createdPost = await Post.create({
       content: content,
-      image: image,
+      image: image || "",
       author: author,
       updated_at: date_now,
       created_at: date_now,
