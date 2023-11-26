@@ -22,13 +22,20 @@ class UserController {
       email: user.email,
       password: user.password,
       username: user.username,
-      name: user.name,
-      profileImage: user.profileimage,
+      profileimage: user.profileimage,
       updated_at: date_now,
       created_at: date_now,
     });
 
     return createdUser;
+  }
+
+  async listAll(req, res) {
+    console.log("UserController.listAll()");
+
+    const users = await User.findAll();
+
+    return res.status(200).json(users);
   }
 }
 

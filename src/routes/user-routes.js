@@ -16,4 +16,8 @@ router.get("/:email", async (req, res) => {
     
 });
 
+router.get("/", async (req, res) => {
+  await controller.listAll(req, res);
+});
+
 module.exports = router;

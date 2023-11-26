@@ -49,9 +49,9 @@ class AuthController {
 
   async register(req, res) {
     console.log("AuthController/register");
-    const { email, password, username, name, profileimage } = req.body;
+    const { email, password, username } = req.body;
 
-    if (!email || !password || !username || !name || !profileimage) {
+    if (!email || !password || !username) {
       return res
         .status(400)
         .json({ created: false, message: "Dados inválidos" });
@@ -63,6 +63,7 @@ class AuthController {
     }
 
     user = req.body;
+    console.log(user);
 
     const created = await userController.create(user);
 

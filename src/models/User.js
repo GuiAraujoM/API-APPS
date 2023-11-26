@@ -15,15 +15,9 @@ const User = sequelize.define(
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
     },
     profileimage: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     created_at: DataTypes.STRING,
     updated_at: DataTypes.STRING,

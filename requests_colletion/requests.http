@@ -1,10 +1,12 @@
-## Registro
+### Registro
 POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "email": "gui",
-    "password": "123"
+	"email":"guiaraujo",
+	"password":"123",
+	"username":"guiaraujo",
+	"profileimage":"https://kanto.legiaodosherois.com.br/w760-h398-cfill/wp-content/uploads/2021/12/legiao_P4uZFebJOGD8.png.webp"
 }
 
 ### Login
@@ -12,24 +14,28 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "gui",
+    "email": "guiaraujo",
     "password": "123"
 }
 
 ### Cadastra post
 POST http://localhost:3000/posts
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aSIsInBhc3N3b3JkIjoiMTIzIiwiaWF0IjoxNzAwOTQxMzI3LCJleHAiOjE3MDA5NDIyMjd9.9ktYaMD5cvV2kp4fyyMuBUe8SZB-RHNCa6av7TgHE_k
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aWFyYXVqbyIsInBhc3N3b3JkIjoiMTIzIiwiaWF0IjoxNzAwOTYzMzY2LCJleHAiOjE3MDA5NjQyNjZ9.fiE1fO2g7TyIzUOiG6vqZziMbSOJh9O8sZhLEn1h1S8
 
 {
     "content": "Bla bla bla",
     "image": "https://static.dezeen.com/uploads/2023/07/x-logo-twitter-elon-musk_dezeen_2364_col_0-1.jpg",
-    "author":"gui"
+    "author":"guiaraujo"
 }
 
 ### Lista posts
 GET http://localhost:3000/posts
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aSIsInBhc3N3b3JkIjoiMTIzIiwiaWF0IjoxNzAwOTQxMzI3LCJleHAiOjE3MDA5NDIyMjd9.9ktYaMD5cvV2kp4fyyMuBUe8SZB-RHNCa6av7TgHE_k
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aWFyYXVqbyIsInBhc3N3b3JkIjoiMTIzIiwiaWF0IjoxNzAwOTYzMzY2LCJleHAiOjE3MDA5NjQyNjZ9.fiE1fO2g7TyIzUOiG6vqZziMbSOJh9O8sZhLEn1h1S8
 
 ### Consulta user
 GET http://localhost:3000/users/gui
+
+
+### List users
+GET http://localhost:3000/users

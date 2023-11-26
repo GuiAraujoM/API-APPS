@@ -18,7 +18,7 @@ class PostController {
       include: [
         {
           model: User,
-          attributes: ["name","username", "profileImage"], // Atributos do modelo User que você deseja incluir
+          attributes: ["username", "profileimage"],
         },
       ],
     });   
