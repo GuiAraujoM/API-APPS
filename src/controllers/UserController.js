@@ -15,8 +15,7 @@ class UserController {
 
   async create(user) {
     console.log("UserController.create()");
-    const now = new Date(Date.now());
-    const date_now = `${now.getFullYear()}-${now.getMonth()}-${now.getDay()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+    const now = new Date(Date.now()).toISOString();
 
     const createdUser = await User.create({
       email: user.email,

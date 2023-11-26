@@ -30,8 +30,7 @@ class PostController {
     console.log("PostController.create()");
     const { content, image, author } = req.body;
 
-    const now = new Date(Date.now());
-    const date_now = `${now.getFullYear()}-${now.getMonth()}-${now.getDay()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+    const now = new Date(Date.now()).toISOString();
 
     const user = await userController.getByEmail(author);
     if(!user){
