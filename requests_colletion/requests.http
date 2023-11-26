@@ -29,7 +29,7 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aSIsInBhc3N
 
 ### Lista posts
 GET http://localhost:3000/posts
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aSIsInBhc3N3b3JkIjoiMTIzIiwiaWF0IjoxNzAwOTQxMzI3LCJleHAiOjE3MDA5NDIyMjd9.9ktYaMD5cvV2kp4fyyMuBUe8SZB-RHNCa6av7TgHE_k
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1aSIsInBhc3N3b3JkIjoiMTIzIiwiaWF0IjoxNzAwOTQxMzI3LCJleHAiOjE3MDA5NDIyMjd9.9ktYaMD5cvV2kp4fyyMuBUe8SZB-RHNCa6av7TgHE_k
 
 ### Consulta user
 GET http://localhost:3000/users/gui
